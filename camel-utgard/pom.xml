@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.dentrassi.camel</groupId>
     <artifactId>de.dentrassi.camel.utgard</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <packaging>bundle</packaging>
 
