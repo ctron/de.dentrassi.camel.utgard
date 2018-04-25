@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.dentrassi.camel</groupId>
     <artifactId>de.dentrassi.camel.utgard</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.1.0</version>
 
     <packaging>bundle</packaging>
 
@@ -37,7 +35,7 @@
         <url>https://github.com/ctron/camel-utgard</url>
         <connection>scm:git:git://github.com/ctron/de.dentrassi.camel.utgard.git</connection>
         <developerConnection>scm:git:git@github.com:ctron/de.dentrassi.camel.utgard.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.1.0</tag>
     </scm>
 
     <issueManagement>
