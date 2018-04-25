@@ -1,4 +1,4 @@
-# OPC DA Camel component
+# OPC DA Camel component [![Maven Central](https://img.shields.io/maven-central/v/de.dentrassi.camel/de.dentrassi.camel.utgard.svg "Maven Central Status")](http://search.maven.org/#search|gav|1|g%3A%22de.dentrassi.camel%22%20AND%20a%3A%22de.dentrassi.camel.utgard%22)
 
 This component for allows connections to OPC DA. For OPC UA you can use `camel-milo` which
 is available in Apache Camel starting with version 2.19.0.
