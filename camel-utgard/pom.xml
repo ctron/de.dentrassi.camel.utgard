@@ -57,6 +57,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <bcprov-jdk15on.version>1.59</bcprov-jdk15on.version>
     </properties>
 
     <dependencyManagement>
@@ -64,7 +66,7 @@
             <dependency>
                 <groupId>org.bouncycastle</groupId>
                 <artifactId>bcprov-jdk15on</artifactId>
-                <version>1.59</version>
+                <version>${bcprov-jdk15on.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -236,7 +238,7 @@
                         <dependency>
                             <groupId>org.bouncycastle</groupId>
                             <artifactId>bcprov-jdk15on</artifactId>
-                            <version>1.50</version>
+                            <version>${bcprov-jdk15on.version}</version>
                         </dependency>
                     </additionalDependencies>
                 </configuration>
@@ -338,5 +340,5 @@
             </build>
         </profile>
     </profiles>
-    
+
 </project>
