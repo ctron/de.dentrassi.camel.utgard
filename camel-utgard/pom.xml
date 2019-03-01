@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.dentrassi.camel</groupId>
     <artifactId>de.dentrassi.camel.utgard</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <version>0.2.0</version>
 
     <packaging>bundle</packaging>
 
@@ -35,7 +35,7 @@
         <url>https://github.com/ctron/camel-utgard</url>
         <connection>scm:git:git://github.com/ctron/de.dentrassi.camel.utgard.git</connection>
         <developerConnection>scm:git:git@github.com:ctron/de.dentrassi.camel.utgard.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.2.0</tag>
     </scm>
 
     <issueManagement>
