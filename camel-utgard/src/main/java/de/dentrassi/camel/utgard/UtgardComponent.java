@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Red Hat Inc
+ * Copyright (C) 2018, 2019 Red Hat Inc
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -15,24 +15,24 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.Endpoint;
-import org.apache.camel.impl.UriEndpointComponent;
+import org.apache.camel.impl.DefaultComponent;
 
 /**
  *
  * @author Jens Reimann
  *
  */
-public class UtgardComponent extends UriEndpointComponent {
+public class UtgardComponent extends DefaultComponent {
 
     private final Map<ConnectionKey, AtomicLong> connectionRefCounter = new HashMap<>();
     private final Map<ConnectionKey, UtgardConnection> connections = new HashMap<>();
 
     public UtgardComponent() {
-        super(UtgardEndpoint.class);
+        super();
     }
 
     public UtgardComponent(final CamelContext context) {
-        super(context, UtgardEndpoint.class);
+        super(context);
     }
 
     @Override
