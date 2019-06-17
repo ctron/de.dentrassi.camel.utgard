@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Red Hat Inc
+ * Copyright (C) 2018, 2019 Red Hat Inc
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -8,6 +8,7 @@
  */
 package de.dentrassi.camel.utgard;
 
+import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
@@ -44,13 +45,13 @@ public class UtgardConsumer extends DefaultConsumer {
     private void handleUpdate(final OPCITEMSTATE state) throws Exception {
         final Exchange exchange = getEndpoint().createExchange();
 
-        exchange.setIn(from(state));
+        exchange.setIn(from(exchange.getContext(), state));
 
         getAsyncProcessor().process(exchange);
     }
 
-    private Message from(final OPCITEMSTATE state) {
-        final DefaultMessage message = new DefaultMessage();
+    private Message from(final CamelContext camelContext, final OPCITEMSTATE state) {
+        final DefaultMessage message = new DefaultMessage(camelContext);
 
         message.setBody(state);
         message.setHeader("utgard.itemId", this.itemId);
