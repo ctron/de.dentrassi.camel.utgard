@@ -239,11 +239,7 @@
                         <dependency>
                             <groupId>org.bouncycastle</groupId>
                             <artifactId>bcprov-jdk15on</artifactId>
-<<<<<<< HEAD
-                            <version>1.50</version>
-=======
                             <version>${bcprov-jdk15on.version}</version>
->>>>>>> upstream/master
                         </dependency>
                     </additionalDependencies>
                 </configuration>
