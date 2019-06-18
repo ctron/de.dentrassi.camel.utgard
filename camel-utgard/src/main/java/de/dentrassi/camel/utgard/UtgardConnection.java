@@ -76,7 +76,7 @@ public class UtgardConnection {
         this.executor = Executors
                 .newSingleThreadScheduledExecutor(r -> new Thread(r, "OPCExecutor/" + COUNTER.getAndIncrement()));
 
-        this.executor.scheduleAtFixedRate(this::runOnce, 0, 1L, TimeUnit.SECONDS);
+        this.executor.scheduleAtFixedRate(this::runOnce, 0, connectionKey.getPushRate(), TimeUnit.MILLISECONDS);
     }
 
     public void close() {

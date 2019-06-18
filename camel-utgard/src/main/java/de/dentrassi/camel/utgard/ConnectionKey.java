@@ -15,6 +15,7 @@ public class ConnectionKey {
     private String password;
     private int reconnectDelay = 5_000;
     private int refreshRate = 1_000;
+    private int pushRate = 1_000;
     private String user;
 
     public void setClsid(final String clsid) {
@@ -39,6 +40,10 @@ public class ConnectionKey {
 
     public void setRefreshRate(final int refreshRate) {
         this.refreshRate = refreshRate;
+    }
+
+    public void setPushRate(final int pushRate) {
+        this.pushRate = pushRate;
     }
 
     public void setUser(final String user) {
@@ -69,6 +74,10 @@ public class ConnectionKey {
         return this.refreshRate;
     }
 
+    public int getPushRate() {
+        return this.pushRate;
+    }
+
     public String getUser() {
         return this.user;
     }
@@ -83,6 +92,7 @@ public class ConnectionKey {
         result = prime * result + (this.password == null ? 0 : this.password.hashCode());
         result = prime * result + this.reconnectDelay;
         result = prime * result + this.refreshRate;
+        result = prime * result + this.pushRate;
         result = prime * result + (this.user == null ? 0 : this.user.hashCode());
         return result;
     }
@@ -131,6 +141,9 @@ public class ConnectionKey {
             return false;
         }
         if (this.refreshRate != other.refreshRate) {
+            return false;
+        }
+        if (this.pushRate != other.pushRate) {
             return false;
         }
         if (this.user == null) {

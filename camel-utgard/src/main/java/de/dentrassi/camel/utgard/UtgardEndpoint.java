@@ -93,6 +93,13 @@ public class UtgardEndpoint extends DefaultEndpoint {
         this.itemId = itemId;
     }
 
+    @UriParam
+    private int pushRate = 1_000;
+
+    public void setPushRate(final int pushRate) {
+        this.pushRate = pushRate;
+    }
+
     public String getItemId() {
         return this.itemId;
     }
@@ -114,6 +121,7 @@ public class UtgardEndpoint extends DefaultEndpoint {
         key.setHost(this.host);
         key.setPassword(this.password);
         key.setRefreshRate(this.refreshRate);
+        key.setPushRate(this.pushRate);
         key.setUser(this.user);
 
         return key;
