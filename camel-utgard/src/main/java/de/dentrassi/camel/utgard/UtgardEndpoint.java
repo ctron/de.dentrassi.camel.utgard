@@ -100,6 +100,13 @@ public class UtgardEndpoint extends DefaultEndpoint {
         this.pushRate = pushRate;
     }
 
+    @UriParam
+    private int connectTimeout = 10_000;
+
+    public void setConnectTimeout(final int connectTimeout) {
+        this.connectTimeout = connectTimeout;
+    }
+
     public String getItemId() {
         return this.itemId;
     }
@@ -122,6 +129,7 @@ public class UtgardEndpoint extends DefaultEndpoint {
         key.setPassword(this.password);
         key.setRefreshRate(this.refreshRate);
         key.setPushRate(this.pushRate);
+        key.setConnectTimeout(this.connectTimeout);
         key.setUser(this.user);
 
         return key;
