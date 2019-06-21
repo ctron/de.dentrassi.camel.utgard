@@ -8,4 +8,4 @@ jdk:
 
 install: true
 
-script: mvn verify -B
+script: mvn verify -B -f camel-utgard/pom.xml
