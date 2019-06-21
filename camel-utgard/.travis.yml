@@ -1,0 +1,12 @@
+
+jdk:
+  - openjdk8
+  - openjdk11
+
+language: java
+
+dist: xenial
+
+install: true
+
+script: mvn verify -B
