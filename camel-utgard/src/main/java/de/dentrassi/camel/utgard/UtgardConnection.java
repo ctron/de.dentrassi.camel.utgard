@@ -283,7 +283,7 @@ public class UtgardConnection {
     }
 
     private int getConnectTimeout() {
-        return 10_000;
+        return connectionKey.getConnectTimeout();
     }
 
     private int getTimeout() {

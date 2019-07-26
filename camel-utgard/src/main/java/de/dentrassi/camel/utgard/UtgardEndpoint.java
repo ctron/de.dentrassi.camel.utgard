@@ -79,6 +79,13 @@ public class UtgardEndpoint extends DefaultEndpoint {
     }
 
     @UriParam
+    private int connectTimeout = 10_000;
+
+    public void setConnectTimeout(final int connectTimeout) {
+        this.connectTimeout = connectTimeout;
+    }
+
+    @UriParam
     private int refreshRate = 1_000;
 
     public void setRefreshRate(final int refreshRate) {
@@ -113,6 +120,7 @@ public class UtgardEndpoint extends DefaultEndpoint {
         key.setDomain(this.domain == null ? "" : this.domain);
         key.setHost(this.host);
         key.setPassword(this.password);
+        key.setConnectTimeout(this.connectTimeout);
         key.setRefreshRate(this.refreshRate);
         key.setUser(this.user);
 

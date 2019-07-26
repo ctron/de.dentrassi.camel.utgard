@@ -14,6 +14,7 @@ public class ConnectionKey {
     private String host;
     private String password;
     private int reconnectDelay = 5_000;
+    private int connectTimeout = 10_000;
     private int refreshRate = 1_000;
     private String user;
 
@@ -35,6 +36,10 @@ public class ConnectionKey {
 
     public void setReconnectDelay(final int reconnectDelay) {
         this.reconnectDelay = reconnectDelay;
+    }
+
+    public void setConnectTimeout(final int connectTimeout) {
+        this.connectTimeout = connectTimeout;
     }
 
     public void setRefreshRate(final int refreshRate) {
@@ -65,6 +70,10 @@ public class ConnectionKey {
         return this.reconnectDelay;
     }
 
+    public int getConnectTimeout() {
+        return this.connectTimeout;
+    }
+
     public int getRefreshRate() {
         return this.refreshRate;
     }
@@ -82,6 +91,7 @@ public class ConnectionKey {
         result = prime * result + (this.host == null ? 0 : this.host.hashCode());
         result = prime * result + (this.password == null ? 0 : this.password.hashCode());
         result = prime * result + this.reconnectDelay;
+        result = prime * result + this.connectTimeout;
         result = prime * result + this.refreshRate;
         result = prime * result + (this.user == null ? 0 : this.user.hashCode());
         return result;
@@ -128,6 +138,9 @@ public class ConnectionKey {
             return false;
         }
         if (this.reconnectDelay != other.reconnectDelay) {
+            return false;
+        }
+        if (this.connectTimeout != other.connectTimeout) {
             return false;
         }
         if (this.refreshRate != other.refreshRate) {
