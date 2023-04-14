@@ -59,7 +59,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <bcprov-jdk15on.version>1.59</bcprov-jdk15on.version>
-        <camel.version>2.21.5</camel.version>
+        <camel.version>3.2.0</camel.version>
     </properties>
 
     <dependencyManagement>
